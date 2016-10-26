@@ -17,8 +17,12 @@ function PeopleController($http) {
   };
 
   controller.addPerson = function() {
-    var data = {name: controller.name};
-
+    var data = {
+      name: controller.name,
+      hometown: controller.hometown,
+      movie: controller.movie
+    };
+    console.log(data);
     $http.post('/people', data).then(function(response){
       console.log('response', response);
     });

@@ -17,12 +17,18 @@
   <ul>
     <li ng-repeat="person in ctrl.people">
       <p>{{person.name}}</p>
+      <p>{{person.town}}</p>
+      <p>{{person.movie}}</p>
     </li>
   </ul>
 
   <div>
     <label>Name:</label>
-    <input type="text" ng-model="ctrl.name">
+    <input type="text" ng-model="ctrl.name" />
+    <label>Hometown:</label>
+    <input type="text" ng-model="ctrl.hometown" />
+    <label>Favorite Movie:</label>
+    <input type="text" ng-model="ctrl.movie" />
     <button ng-click="ctrl.addPerson()">Add Person</button>
   </div>
 </body>
